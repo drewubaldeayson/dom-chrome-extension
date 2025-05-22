@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM to Slack Extractor</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 DOM to Slack</h1>
+            <p>Extract page data and send to Slack</p>
+        </div>
+        
+        <div class="config-section">
+            <label for="webhookUrl">Slack Webhook URL:</label>
+            <input type="password" id="webhookUrl" placeholder="https://hooks.slack.com/..." />
+            <button id="saveConfig" class="btn-secondary">Save</button>
+        </div>
+        
+        <div class="preview-section">
+            <h3>Preview Data:</h3>
+            <div id="previewData">
+                <div class="preview-item">
+                    <strong>Title:</strong> <span id="previewTitle">Loading...</span>
+                </div>
+                <div class="preview-item">
+                    <strong>Summary:</strong> <span id="previewSummary">Loading...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button id="captureBtn" class="btn-primary">
+                <span class="btn-text">📄 Capture & Send to Slack</span>
+                <div class="loading-spinner" style="display: none;"></div>
+            </button>
+            <button id="highlightBtn" class="btn-secondary">🎯 Highlight Elements</button>
+        </div>
+        
+        <div id="status" class="status-message"></div>
+        
+        <div class="footer">
+            <small>Works on any website • Secure & Private</small>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

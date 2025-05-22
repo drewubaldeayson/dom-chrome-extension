@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 350px;
+    min-height: 500px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.header p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.config-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.config-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.config-section input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+}
+
+.config-section input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.preview-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.preview-section h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.preview-item {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.preview-item strong {
+    color: #667eea;
+    display: inline-block;
+    min-width: 60px;
+}
+
+.preview-item span {
+    color: #666;
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.status-message {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    min-height: 16px;
+    transition: all 0.3s;
+}
+
+.status-message.success {
+    background: rgba(72, 187, 120, 0.1);
+    color: #38a169;
+    border: 1px solid rgba(72, 187, 120, 0.3);
+}
+
+.status-message.error {
+    background: rgba(245, 101, 101, 0.1);
+    color: #e53e3e;
+    border: 1px solid rgba(245, 101, 101, 0.3);
+}
+
+.status-message.info {
+    background: rgba(66, 153, 225, 0.1);
+    color: #3182ce;
+    border: 1px solid rgba(66, 153, 225, 0.3);
+}
+
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: auto;
+}
+
+.footer small {
+    font-size: 10px;
+}
